@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Drive limits and speed · YDL</title>
+<link rel="stylesheet" href="../style.css">
+<main class="document">
+    <a class="brand" href="index.html">collblock <span>YDL</span></a>
+    <a class="document-language" href="../google-drive-help.html" lang="ru" hreflang="ru">Русский</a>
+    <h1>Google Drive limits and speed</h1>
+    <p>For public downloads, YDL uses a built-in Google Drive API key with a shared project quota. A personal key can help if Google limits requests from the shared project.</p>
+    <h2>Slow downloads</h2>
+    <p>Try downloading the same file in your browser. Network conditions, your VPN, and restrictions on the shared link can also affect speed. If YDL reports that public downloads are limited, try later or use your own key.</p>
+    <h2>Get a personal API key</h2>
+    <ol>
+        <li>Open the <a href="https://console.cloud.google.com/">Google Cloud console</a> and create or select a project.</li>
+        <li>In that project, open <a href="https://console.cloud.google.com/apis/library/drive.googleapis.com">Google Drive API</a> and select <b>Enable</b>.</li>
+        <li>Open <a href="https://console.cloud.google.com/apis/credentials">Credentials</a> and select <b>Create credentials → API key</b>. Under <b>API restrictions</b>, restrict the key to <b>Google Drive API</b> and save.</li>
+        <li>In YDL 3.0 Beta 9 or later, open <b>Settings</b>, enter the key under <b>Personal Drive API key</b>, save it, and retry the download.</li>
+    </ol>
+    <p>Windows protects the key on your computer. You can switch back to the built-in key in the same settings. Restricted links still require file access and Google sign-in.</p>
+    <p><a href="https://cloud.google.com/docs/authentication/api-keys">Google's API key guide</a> · <a href="privacy.html">Privacy policy</a></p>
+</main>
+</html>

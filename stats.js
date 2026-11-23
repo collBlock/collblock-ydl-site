@@ -1,7 +1,9 @@
 const statsStatus = document.getElementById('stats-status');
-const counts = new Intl.NumberFormat('ru-RU');
-const quantities = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 1 });
-const units = ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ', 'ПБ'];
+const statsSource = document.getElementById('stats-source');
+const statsLocale = document.documentElement.lang || 'ru';
+const counts = new Intl.NumberFormat(statsLocale);
+const quantities = new Intl.NumberFormat(statsLocale, { maximumFractionDigits: 1 });
+const units = statsLocale === 'en' ? ['B', 'KB', 'MB', 'GB', 'TB', 'PB'] : ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ', 'ПБ'];
 
 function formatStat(value, field) {
     if (!Number.isSafeInteger(value) || value < 0) return '—';
@@ -16,7 +18,7 @@ function formatStat(value, field) {
 
 async function renderStats() {
     try {
-        const response = await fetch('./stats.json', { cache: 'no-cache' });
+        const response = await fetch(statsSource.href, { cache: 'no-cache', credentials: 'omit' });
         if (!response.ok) throw new Error('Statistics unavailable');
         const data = await response.json();
         for (const node of document.querySelectorAll('[data-stat]')) {
@@ -25,10 +27,10 @@ async function renderStats() {
         }
         const updated = data.updated_at && new Date(data.updated_at);
         statsStatus.textContent = updated && Number.isFinite(updated.getTime())
-            ? 'Обновлено ' + updated.toLocaleString('ru-RU')
-            : 'Сбор статистики пока не подключён.';
+            ? statsStatus.dataset.updated + ' ' + updated.toLocaleString(statsLocale)
+            : statsStatus.dataset[data.installations_total === 0 ? 'empty' : 'disconnected'];
     } catch {
-        statsStatus.textContent = 'Статистика сейчас недоступна.';
+        statsStatus.textContent = statsStatus.dataset.error;
     }
 }
 

@@ -24,6 +24,7 @@ h2 { font-size: 1.22rem; line-height: 1.2; margin: 0 0 .55em; }
 p, li { color: var(--dim); }
 p { margin: 0 0 1em; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 24px; }
+.hero-lead { color: #f3f6ff; font-size: 1.35rem; font-weight: 650; line-height: 1.3; margin-bottom: .55em; }
 .button { display: inline-block; padding: 10px 17px; border: 1px solid #497dba; border-radius: 10px; background: #19477f; color: white; text-decoration: none; font-weight: 650; }
 .preview { background: #10151e; border: 1px solid #364357; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px #0006; }
 .preview-bar { display: flex; align-items: center; gap: 7px; padding: 14px; border-bottom: 1px solid var(--line); }
@@ -40,7 +41,9 @@ p { margin: 0 0 1em; }
 .features article, .note { padding: 20px; border: 1px solid var(--line); background: #131923; border-radius: 12px; }
 .features p, .note p { margin-bottom: 0; }
 .note { margin-block: 22px 44px; }
+.note p + p { margin-top: .8em; }
 .document { max-width: 760px; margin: auto; padding: 44px 24px; }
+.document-language { float: right; }
 .document h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin-top: 18px; }
 .document h2 { margin-top: 26px; }
 .document li { margin-bottom: 12px; }
