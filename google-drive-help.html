@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скорость и лимиты Google Диска · collblock YDL</title>
+<meta name="description" content="Как проверить медленную загрузку Google Диска и подключить свой ключ Google Drive API в YDL.">
+<link rel="stylesheet" href="style.css">
+<main class="document">
+    <a class="brand" href="index.html">collblock <span>YDL</span></a>
+    <h1>Скорость и лимиты Google Диска</h1>
+    <p>Когда вы скачиваете открытый файл без входа, YDL обращается к Google Drive API со встроенным ключом. У этого ключа общая квота проекта. Свой ключ пригодится, если Google ограничил запросы общего проекта.</p>
+    <h2>Если загрузка идёт медленно</h2>
+    <p>Проверьте, как быстро тот же файл скачивается в браузере. На скорость влияют сеть, VPN и ограничения самой ссылки. Если YDL сообщает об ограничении публичных загрузок, попробуйте позже или подключите свой ключ.</p>
+    <h2>Как получить свой ключ</h2>
+    <ol>
+        <li>Откройте <a href="https://console.cloud.google.com/">Google Cloud Console</a> и создайте свой проект или выберите существующий.</li>
+        <li>В выбранном проекте откройте <a href="https://console.cloud.google.com/apis/library/drive.googleapis.com">Google Drive API</a> и нажмите <b>Enable</b>.</li>
+        <li>Откройте <a href="https://console.cloud.google.com/apis/credentials">Credentials</a> и выберите <b>Create credentials → API key</b>. В настройках ключа, в разделе <b>API restrictions</b>, оставьте доступ только к <b>Google Drive API</b> и сохраните.</li>
+        <li>Скопируйте ключ и вставьте его только в YDL. Откройте <b>Настройки → Свой ключ Drive API</b>, нажмите <b>Сохранить ключ</b> и повторите загрузку. Эта настройка появилась в 3.0 Beta 9.</li>
+    </ol>
+    <p>Ключ хранится на вашем компьютере под защитой Windows. В тех же настройках можно вернуться к встроенному ключу. Для закрытой ссылки по-прежнему понадобятся доступ к файлу и вход через Google.</p>
+    <p><a href="https://cloud.google.com/docs/authentication/api-keys">Справка Google по ключам</a> · <a href="privacy.html">Конфиденциальность</a></p>
+</main>
+</html>
