@@ -5,7 +5,7 @@
 <meta name="description" content="Public YDL statistics for installations and downloads from Yandex Disk and Google Drive.">
 <title>Public statistics · YDL</title>
 <link rel="stylesheet" href="../style.css">
-<script defer src="../stats.js"></script>
+<script defer src="../stats.js?v=12"></script>
 <body>
 <header class="page-head wrap">
     <a class="brand" href="index.html">collblock <span>YDL</span></a>
@@ -16,7 +16,7 @@
 </header>
 <main class="wrap stats-page">
     <h1>YDL public statistics</h1>
-    <p id="stats-status" role="status" data-updated="Updated" data-empty="No installations have reported yet." data-disconnected="Usage reporting is not connected yet." data-error="Statistics are currently unavailable.">Loading statistics…</p>
+    <p id="stats-status" role="status" data-source="https://ydl-stats.collblock-ydl.workers.dev/stats.json" data-updated="Updated" data-empty="No installations have reported yet." data-disconnected="Usage reporting is not connected yet." data-error="Statistics are currently unavailable.">Loading statistics…</p>
     <section class="stats-grid" aria-label="Overall statistics">
         <dl><dt>Participating installations</dt><dd data-stat="installations_total">—</dd></dl>
         <dl><dt>Active in the last 30 days</dt><dd data-stat="active_installations_30d">—</dd></dl>
@@ -33,7 +33,6 @@
     </table>
     <p>Activity by provider counts installations that downloaded from that provider in the last 30 days. An installation can appear in both rows.</p>
     <p>These figures cover installations whose owners opted into usage reporting. The Google Drive row covers public links downloaded without OAuth.</p>
-    <a id="stats-source" href="https://ydl-stats.collblock-ydl.workers.dev/stats.json">Public summary in JSON</a>
 </main>
 <footer class="wrap page-foot"><a href="privacy.html">Privacy policy</a><a href="index.html">About YDL</a></footer>
 </body>
