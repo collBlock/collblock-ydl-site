@@ -22,7 +22,8 @@ h1 { font-size: clamp(2.25rem, 4.8vw, 4.2rem); margin: .12em 0 .35em; line-heigh
 h2 { font-size: 1.22rem; line-height: 1.2; margin: 0 0 .55em; }
 p, li { color: var(--dim); }
 p { margin: 0 0 1em; }
-.button { display: inline-block; padding: 10px 17px; margin-top: 8px; border: 1px solid #497dba; border-radius: 10px; background: #19477f; color: white; text-decoration: none; font-weight: 650; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 24px; }
+.button { display: inline-block; padding: 10px 17px; border: 1px solid #497dba; border-radius: 10px; background: #19477f; color: white; text-decoration: none; font-weight: 650; }
 .preview { background: #10151e; border: 1px solid #364357; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px #0006; }
 .preview-bar { display: flex; align-items: center; gap: 7px; padding: 14px; border-bottom: 1px solid var(--line); }
 .preview-bar i { width: 9px; height: 9px; border-radius: 50%; background: #ff625a; }
