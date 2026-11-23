@@ -1,4 +1,5 @@
 {
+  "source": "https://ydl-stats.collblock-ydl.workers.dev/stats.json",
   "updated_at": null,
   "installations_total": null,
   "active_installations_30d": null,
