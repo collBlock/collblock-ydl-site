@@ -47,19 +47,6 @@ p { margin: 0 0 1em; }
 .document h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin-top: 18px; }
 .document h2 { margin-top: 26px; }
 .document li { margin-bottom: 12px; }
-.stats-page { padding-block: 48px; }
-.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 14px; margin-block: 26px 32px; }
-.stats-grid dl { margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #131923; }
-.stats-grid dt { color: var(--dim); font-size: .875rem; }
-.stats-grid dd { margin: .2em 0 0; color: #c7e2ff; font-size: clamp(1.65rem, 4vw, 2.4rem); font-weight: 700; font-variant-numeric: tabular-nums; }
-.stats-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
-.stats-table th, .stats-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: right; }
-.stats-table thead { color: var(--dim); font-size: .875rem; }
-.stats-table th:first-child { text-align: left; }
-.stats-table td { font-variant-numeric: tabular-nums; }
-@media (max-width: 470px) {
-    .stats-table th, .stats-table td { padding-inline: 5px; }
-}
 code { overflow-wrap: anywhere; color: #bddfff; }
 @media (max-width: 730px) {
     .hero, .features { grid-template-columns: 1fr; }
